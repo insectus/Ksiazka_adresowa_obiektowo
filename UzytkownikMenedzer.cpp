@@ -45,7 +45,7 @@ int UzytkownikMenedzer::pobierzIdNowegoUzytkownika()
 bool UzytkownikMenedzer::czyIstniejeLogin(string login)
 {
 
-    for (int i = 0; i < uzytkownicy.size(); i++){
+    for (auto i = 0; i < uzytkownicy.size(); i++){
 
         if(uzytkownicy[i].pobierzLogin() == login){
             cout << "\nIstnieje uzytkownik o takim loginie.\n";
@@ -62,4 +62,8 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
         cout << uzytkownicy[i].pobierzHaslo() << endl;
     }
 
+}
+
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
+    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
