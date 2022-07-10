@@ -67,3 +67,41 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
 void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
+
+int UzytkownikMenedzer::logowanieUzytkownika(){
+    string login = "", haslo = "";
+
+    cout << endl << "Podaj login: ";
+    login = metodyPomocnicze.wczytajLinie();
+
+    vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
+    while (itr != uzytkownicy.end())
+    {
+        if (itr -> pobierzLogin() == login)
+        {
+            for (int iloscProb = 3; iloscProb > 0; iloscProb--)
+            {
+                cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
+                haslo = metodyPomocnicze.wczytajLinie();
+
+                if (itr -> pobierzHaslo() == haslo)
+                {
+                    cout << endl << "Zalogowales sie." << endl << endl;
+                    system("pause");
+                    idZalogowanegoUzytkownika = itr -> pobierzId();
+                    return idZalogowanegoUzytkownika;
+
+                }
+            }
+            cout << "Wprowadzono 3 razy bledne haslo." << endl;
+            system("pause");
+            idZalogowanegoUzytkownika = 0;
+            return idZalogowanegoUzytkownika;
+        }
+        itr++;
+    }
+    cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
+    system("pause");
+    idZalogowanegoUzytkownika = 0;
+    return idZalogowanegoUzytkownika;
+}

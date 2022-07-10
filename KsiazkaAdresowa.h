@@ -21,6 +21,7 @@ public:
     void dodajAdresata();
     void wypiszWszystkichUzytkownikow();
     void wypiszWszystkichAdresatow();
+    void logowanieUzytkownika();
 };
 
 #endif
