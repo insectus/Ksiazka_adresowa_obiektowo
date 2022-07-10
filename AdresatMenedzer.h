@@ -9,6 +9,7 @@
 
 #include "Adresat.h"
 #include "PlikZAdresatami.h"
+#include "PlikZUzytkownikami.h"
 
 using namespace std;
 
@@ -18,10 +19,11 @@ class AdresatMenedzer {
     int idUsunietegoAdresata;
     vector <Adresat> adresaci;
     PlikZAdresatami plikZAdresatami;
+    //Adresat podajDaneNowegoAdresata()
 
 public:
     AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){};
-    void dodajAdresata();
+    int dodajAdresata();
     void wypiszWszystkichAdresatow();
     void wczytajAdresatowZPliku();
 };

@@ -18,12 +18,12 @@ public:
     };
 
     void rejestracjaUzytkownika();
-    void dodajAdresata();
     void wypiszWszystkichUzytkownikow();
     void wypiszWszystkichAdresatow();
     void logowanieUzytkownika();
     void wylogowanieUzytkownika();
     void zmianaHaslaZalogowanegoUzytkownika();
+
 };
 
 #endif
