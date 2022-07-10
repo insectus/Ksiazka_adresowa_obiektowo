@@ -22,6 +22,8 @@ public:
     void wypiszWszystkichUzytkownikow();
     void wypiszWszystkichAdresatow();
     void logowanieUzytkownika();
+    void wylogowanieUzytkownika();
+    //void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif

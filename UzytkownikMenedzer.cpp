@@ -1,7 +1,6 @@
 #include "UzytkownikMenedzer.h"
 
-void UzytkownikMenedzer::rejestracjaUzytkownika()
-{
+void UzytkownikMenedzer::rejestracjaUzytkownika() {
     Uzytkownik uzytkownik = podajDaneNowegoUzytkownika();
 
     uzytkownicy.push_back(uzytkownik);
@@ -12,15 +11,13 @@ void UzytkownikMenedzer::rejestracjaUzytkownika()
     system("pause");
 }
 
-Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
-{
+Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
     Uzytkownik uzytkownik;
 
     uzytkownik.ustawId(pobierzIdNowegoUzytkownika());
 
     string login;
-    do
-    {
+    do {
         cout << "Podaj login: ";
         cin >> login;
         uzytkownik.ustawLogin(login);
@@ -34,20 +31,18 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika()
     return uzytkownik;
 }
 
-int UzytkownikMenedzer::pobierzIdNowegoUzytkownika()
-{
+int UzytkownikMenedzer::pobierzIdNowegoUzytkownika() {
     if (uzytkownicy.empty() == true)
         return 1;
     else
         return uzytkownicy.back().pobierzId()+ 1;
 }
 
-bool UzytkownikMenedzer::czyIstniejeLogin(string login)
-{
+bool UzytkownikMenedzer::czyIstniejeLogin(string login) {
 
-    for (int i = 0; i < uzytkownicy.size(); i++){
+    for (int i = 0; i < uzytkownicy.size(); i++) {
 
-        if(uzytkownicy[i].pobierzLogin() == login){
+        if(uzytkownicy[i].pobierzLogin() == login) {
             cout << "\nIstnieje uzytkownik o takim loginie.\n";
             return true;
         }
@@ -64,28 +59,24 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
 
 }
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPliku(){
+void UzytkownikMenedzer::wczytajUzytkownikowZPliku() {
     uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
 }
 
-int UzytkownikMenedzer::logowanieUzytkownika(){
+int UzytkownikMenedzer::logowanieUzytkownika() {
     string login = "", haslo = "";
 
     cout << endl << "Podaj login: ";
     login = metodyPomocnicze.wczytajLinie();
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
-    while (itr != uzytkownicy.end())
-    {
-        if (itr -> pobierzLogin() == login)
-        {
-            for (int iloscProb = 3; iloscProb > 0; iloscProb--)
-            {
+    while (itr != uzytkownicy.end()) {
+        if (itr -> pobierzLogin() == login) {
+            for (int iloscProb = 3; iloscProb > 0; iloscProb--) {
                 cout << "Podaj haslo. Pozostalo prob: " << iloscProb << ": ";
                 haslo = metodyPomocnicze.wczytajLinie();
 
-                if (itr -> pobierzHaslo() == haslo)
-                {
+                if (itr -> pobierzHaslo() == haslo) {
                     cout << endl << "Zalogowales sie." << endl << endl;
                     system("pause");
                     idZalogowanegoUzytkownika = itr -> pobierzId();
@@ -102,6 +93,11 @@ int UzytkownikMenedzer::logowanieUzytkownika(){
     }
     cout << "Nie ma uzytkownika z takim loginem" << endl << endl;
     system("pause");
+    idZalogowanegoUzytkownika = 0;
+    return idZalogowanegoUzytkownika;
+}
+
+int UzytkownikMenedzer::wylogowanieUzytkownika(){
     idZalogowanegoUzytkownika = 0;
     return idZalogowanegoUzytkownika;
 }

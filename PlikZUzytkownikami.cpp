@@ -19,6 +19,8 @@ void PlikZUzytkownikami::dopiszUzytkownikaDoPliku(Uzytkownik uzytkownik) {
     plikTekstowy.close();
 }
 
+
+
 bool PlikZUzytkownikami::czyPlikJestPusty() {
     fstream plikTekstowy;
     plikTekstowy.seekg(0, ios::end);
@@ -92,3 +94,4 @@ Uzytkownik PlikZUzytkownikami::pobierzDaneUzytkownika(string daneJednegoUzytkown
     }
     return uzytkownik;
 }
+
