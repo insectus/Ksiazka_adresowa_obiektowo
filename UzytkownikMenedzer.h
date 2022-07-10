@@ -31,6 +31,7 @@ public:
     void wczytajUzytkownikowZPliku();
     int logowanieUzytkownika();
     int wylogowanieUzytkownika();
+    void zmianaHaslaZalogowanegoUzytkownika();
 };
 
 #endif
