@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <sstream>
+#include <algorithm>
 
 using namespace std;
 
@@ -11,6 +12,7 @@ class MetodyPomocnicze {
 public:
     static string konwerjsaIntNaString(int liczba);
     string wczytajLinie();
+    string zamienPierwszaLitereNaDuzaAPozostaleNaMale(string tekst);
 };
 
 #endif
