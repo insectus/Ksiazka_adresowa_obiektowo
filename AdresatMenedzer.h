@@ -23,7 +23,6 @@ class AdresatMenedzer {
     int pobierzIdNowegoAdresata();
     PlikZAdresatami plikZAdresatami;
     Uzytkownik uzytkownik;
-    MetodyPomocnicze metodyPomocnicze;
     Adresat podajDaneNowegoAdresata();
 
 
@@ -32,6 +31,7 @@ public:
     };
     void dodajAdresata();
     void wypiszWszystkichAdresatow();
+    void ustawIdZalogowanegoUzytkownika(int noweId);
     //void wczytajAdresatowZPliku();
 };
 

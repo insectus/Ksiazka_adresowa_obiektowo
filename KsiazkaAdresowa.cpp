@@ -10,6 +10,8 @@ void KsiazkaAdresowa::wypiszWszystkichUzytkownikow() {
 
 void KsiazkaAdresowa::logowanieUzytkownika(){
     uzytkownikMenedzer.logowanieUzytkownika();
+    int noweId = uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
+    adresatMenedzer.ustawIdZalogowanegoUzytkownika(noweId);
 }
 
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
