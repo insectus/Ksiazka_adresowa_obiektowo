@@ -12,6 +12,7 @@ void KsiazkaAdresowa::logowanieUzytkownika(){
     uzytkownikMenedzer.logowanieUzytkownika();
     int noweId = uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
     adresatMenedzer.ustawIdZalogowanegoUzytkownika(noweId);
+
 }
 
 void KsiazkaAdresowa::wylogowanieUzytkownika(){
@@ -29,4 +30,8 @@ void KsiazkaAdresowa::dodajAdresata(){
 
 void KsiazkaAdresowa::wypiszWszystkichAdresatow(){
     adresatMenedzer.wypiszWszystkichAdresatow();
+}
+
+void KsiazkaAdresowa::wczytajWszystkichAdresatowZalogowanegoUzytkownika(){
+    adresatMenedzer.wczytajAdresatow();
 }

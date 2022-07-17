@@ -60,3 +60,7 @@ void AdresatMenedzer::wypiszWszystkichAdresatow(){
 void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweId){
     idZalogowanegoUzytkownika = noweId;
 }
+
+void AdresatMenedzer::wczytajAdresatow(){
+    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
+}
