@@ -30,8 +30,3 @@ void KsiazkaAdresowa::dodajAdresata(){
 void KsiazkaAdresowa::wypiszWszystkichAdresatow(){
     adresatMenedzer.wypiszWszystkichAdresatow();
 }
-/*
-void KsiazkaAdresowa::wczytajAdresatowZPliku(){
-    adresatMenedzer.wczytajAdresatowZPliku();
-}
-*/

@@ -2,7 +2,7 @@
 
 void AdresatMenedzer::dodajAdresata() {
     system("cls");
-    cout << " >>> DODAWANIE NOWEGO ADRESATA <<<" << endl << endl;
+    cout << " >>> DODAWANIE NOWEGO ADRESATA <<<\n\n";
     Adresat adresat = podajDaneNowegoAdresata();
 
     adresaci.push_back(adresat);
@@ -54,6 +54,7 @@ void AdresatMenedzer::wypiszWszystkichAdresatow(){
         cout << adresaci[i].pobierzEmail() << endl;
         cout << adresaci[i].pobierzAdres() << endl;
     }
+    system("pause");
 }
 
 void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweId){

@@ -27,12 +27,12 @@ class AdresatMenedzer {
 
 
 public:
-    AdresatMenedzer(){
+    AdresatMenedzer(string nazwaPlikuZAdresatami) : plikZAdresatami(nazwaPlikuZAdresatami){
+        adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
     };
     void dodajAdresata();
     void wypiszWszystkichAdresatow();
     void ustawIdZalogowanegoUzytkownika(int noweId);
-    //void wczytajAdresatowZPliku();
 };
 
 #endif
