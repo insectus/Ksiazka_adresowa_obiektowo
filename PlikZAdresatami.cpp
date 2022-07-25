@@ -9,7 +9,7 @@ void PlikZAdresatami::dopiszAdresataDoPliku(Adresat adresat) {
     if (plikTekstowy.good() == true) {
         liniaZDanymiAdresata = zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
 
-        if (czyPlikJestPusty() == true) {
+        if (czyPlikJestPusty(plikTekstowy) == true) {
             plikTekstowy << liniaZDanymiAdresata;
         } else {
             plikTekstowy << endl << liniaZDanymiAdresata ;
@@ -35,8 +35,7 @@ string PlikZAdresatami::zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKre
     return liniaZDanymiAdresata;
 }
 
-bool PlikZAdresatami::czyPlikJestPusty() {
-    fstream plikTekstowy;
+bool PlikZAdresatami::czyPlikJestPusty(fstream &plikTekstowy) {
     plikTekstowy.seekg(0, ios::end);
     if (plikTekstowy.tellg() == 0)
         return true;
