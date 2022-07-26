@@ -44,7 +44,7 @@ int AdresatMenedzer::pobierzIdNowegoAdresata(){
 }
 
 void AdresatMenedzer::wypiszWszystkichAdresatow(){
-    for (int i = 0; i < adresaci.size(); i++) {
+    for (long long unsigned int i = 0; i < adresaci.size(); i++) {
 
         cout << adresaci[i].pobierzId() << endl;
         cout << adresaci[i].pobierzIdUzytkownika() << endl;

@@ -1,2 +1,0 @@
-1|1|Damian|Krz|123 456 789|damian.com|adama 3/4|
-1|2|Adam|Jan|234 567 890|adam.com|damian 4/6|
