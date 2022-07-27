@@ -36,6 +36,7 @@ int main() {
                 ksiazkaAdresowa.dodajAdresata();
                 break;
             case '2': //wyszukaj po imieniu
+                ksiazkaAdresowa.wyszukajPoImieniu();
                 break;
             case '3': //wyszukaj po nazwisku
                 break;

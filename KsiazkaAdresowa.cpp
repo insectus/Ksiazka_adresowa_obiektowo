@@ -49,6 +49,15 @@ int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika() {
     return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
 }
 
+void KsiazkaAdresowa::wyszukajPoImieniu(){
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+        adresatMenedzer->wyszukajPoImieniu();
+    } else {
+        cout << "Aby wyszukac adresatow nalezy najpierw sie zalogowac\n.";
+        Sleep(1500);
+    }
+}
+
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego() {
     char wybor;
 
