@@ -7,8 +7,9 @@ void UzytkownikMenedzer::rejestracjaUzytkownika() {
 
     plikZUzytkownikami.dopiszUzytkownikaDoPliku(uzytkownik);
 
-    cout << "\nKonto zalozono pomyslnie!\n";
-    system("pause");
+    cout << "\nKonto zalozono pomyslnie!";
+    Sleep(1000);
+    cin.ignore();
 }
 
 Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
@@ -18,7 +19,7 @@ Uzytkownik UzytkownikMenedzer::podajDaneNowegoUzytkownika() {
 
     string login;
     do {
-        cout << "Podaj login: ";
+        cout << "\nPodaj login: ";
         cin >> login;
         uzytkownik.ustawLogin(login);
     } while (czyIstniejeLogin(uzytkownik.pobierzLogin()) == true);
@@ -60,15 +61,10 @@ void UzytkownikMenedzer::wypiszWszystkichUzytkownikow() {
 
 }
 
-void UzytkownikMenedzer::wczytajUzytkownikowZPliku() {
-    uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
-}
-
 int UzytkownikMenedzer::logowanieUzytkownika() {
     string login = "", haslo = "";
 
     cout << "\nPodaj login: ";
-    cin.ignore();
     login = MetodyPomocnicze::wczytajLinie();
 
     vector <Uzytkownik>::iterator itr = uzytkownicy.begin();
@@ -79,8 +75,8 @@ int UzytkownikMenedzer::logowanieUzytkownika() {
                 haslo = MetodyPomocnicze::wczytajLinie();
 
                 if (itr -> pobierzHaslo() == haslo) {
-                    cout << endl << "Zalogowales sie." << endl << endl;
-                    system("pause");
+                    cout << endl << "Zalogowales sie! Przechodze do Menu Uzytkownika.";
+                    Sleep(1500);
                     idZalogowanegoUzytkownika = itr -> pobierzId();
                     return idZalogowanegoUzytkownika;
 
@@ -99,9 +95,8 @@ int UzytkownikMenedzer::logowanieUzytkownika() {
     return idZalogowanegoUzytkownika;
 }
 
-int UzytkownikMenedzer::wylogowanieUzytkownika() {
+void UzytkownikMenedzer::wylogowanieUzytkownika() {
     idZalogowanegoUzytkownika = 0;
-    return idZalogowanegoUzytkownika;
 }
 
 void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
@@ -121,4 +116,16 @@ void UzytkownikMenedzer::zmianaHaslaZalogowanegoUzytkownika() {
 
 int UzytkownikMenedzer::pobierzIdZalogowanegoUzytkownika() {
     return idZalogowanegoUzytkownika;
+}
+
+void UzytkownikMenedzer::ustawIdZalogowanegoUzytkownika(int noweId) {
+    idZalogowanegoUzytkownika = noweId;
+}
+
+bool UzytkownikMenedzer::czyUzytkownikJestZalogowany(){
+    if(idZalogowanegoUzytkownika > 0){
+        return true;
+    }else{
+        return false;
+    }
 }
