@@ -37,7 +37,8 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
 }
 
 void AdresatMenedzer::wypiszWszystkichAdresatow(){
-    for (long long unsigned int i = 0; i < adresaci.size(); i++) {
+    if(!adresaci.empty()){
+        for (long long unsigned int i = 0; i < adresaci.size(); i++) {
 
         cout << adresaci[i].pobierzId() << endl;
         cout << adresaci[i].pobierzIdUzytkownika() << endl;
@@ -47,5 +48,9 @@ void AdresatMenedzer::wypiszWszystkichAdresatow(){
         cout << adresaci[i].pobierzEmail() << endl;
         cout << adresaci[i].pobierzAdres() << endl;
     }
+    }else {
+        cout << "\nKsiazka adresowa jest pusta.\n\n";
+    }
+
     system("pause");
 }
