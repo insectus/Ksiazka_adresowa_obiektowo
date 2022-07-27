@@ -13,8 +13,8 @@ void AdresatMenedzer::dodajAdresata() {
 Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
     Adresat adresat;
 
-    adresat.ustawId(pobierzIdNowegoAdresata());
-    adresat.ustawIdUzytkownika(idZalogowanegoUzytkownika);
+    adresat.ustawId(plikZAdresatami.pobierzIdOstatniegoAdresata() + 1);
+    adresat.ustawIdUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA);
 
     cout << "Podaj imie: ";
     adresat.ustawImie(MetodyPomocnicze::wczytajLinie());
@@ -36,13 +36,6 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
     return adresat;
 }
 
-int AdresatMenedzer::pobierzIdNowegoAdresata(){
-        if (adresaci.empty() == true)
-        return 1;
-    else
-        return adresaci.back().pobierzId()+ 1;
-}
-
 void AdresatMenedzer::wypiszWszystkichAdresatow(){
     for (long long unsigned int i = 0; i < adresaci.size(); i++) {
 
@@ -55,12 +48,4 @@ void AdresatMenedzer::wypiszWszystkichAdresatow(){
         cout << adresaci[i].pobierzAdres() << endl;
     }
     system("pause");
-}
-
-void AdresatMenedzer::ustawIdZalogowanegoUzytkownika(int noweId){
-    idZalogowanegoUzytkownika = noweId;
-}
-
-void AdresatMenedzer::wczytajAdresatow(){
-    adresaci = plikZAdresatami.wczytajAdresatowZalogowanegoUzytkownikaZPliku(idZalogowanegoUzytkownika);
 }

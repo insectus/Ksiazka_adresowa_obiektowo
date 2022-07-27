@@ -1,0 +1,5 @@
+1|1|Damian|Krz|123 456 789|damin.com|dluga 3/6|
+2|3|Maniek|Sroka|234 567 890|maniek.com|dluga 3/2|
+3|2|Iwona|Kurz|098 765 432|iwona.com|lekka 2/4|
+4|2|Janian|Wrona|987 654 321|janian.com|krucza 23/7|
+5|1|Joanna|Krz|741 855 963|joanna.com|Filopa 32|
