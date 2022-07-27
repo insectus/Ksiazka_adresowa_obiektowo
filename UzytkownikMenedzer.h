@@ -24,8 +24,7 @@ class UzytkownikMenedzer {
     PlikZUzytkownikami plikZUzytkownikami;
 
 public:
-    UzytkownikMenedzer(string NAZWA_PLIKU_Z_UZYTKOWNIKAMI, int ID_ZALOGOWANEGO_UZYTKOWNIKA = 0)
-    : plikZUzytkownikami(NAZWA_PLIKU_Z_UZYTKOWNIKAMI), idZalogowanegoUzytkownika(ID_ZALOGOWANEGO_UZYTKOWNIKA) {
+    UzytkownikMenedzer(string NAZWA_PLIKU_Z_UZYTKOWNIKAMI) : plikZUzytkownikami(NAZWA_PLIKU_Z_UZYTKOWNIKAMI) {
         idZalogowanegoUzytkownika = 0;
         uzytkownicy = plikZUzytkownikami.wczytajUzytkownikowZPliku();
     };

@@ -17,7 +17,7 @@ class KsiazkaAdresowa {
 public:
     KsiazkaAdresowa(string NAZWA_PLIKU_Z_UZYTKOWNIKAMI, string nazwaPlikuZAdresatami)
         : uzytkownikMenedzer(NAZWA_PLIKU_Z_UZYTKOWNIKAMI), NAZWA_PLIKU_Z_ADRESATAMI(nazwaPlikuZAdresatami) {
-       adresatMenedzer = NULL;
+        adresatMenedzer = NULL;
     };
 
     ~KsiazkaAdresowa() {

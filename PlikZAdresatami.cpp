@@ -61,15 +61,15 @@ vector <Adresat> PlikZAdresatami::wczytajAdresatowZalogowanegoUzytkownikaZPliku(
         while (getline(plikTekstowy, daneJednegoAdresataOddzielonePionowymiKreskami)) {
 
             if(idZalogowanegoUzytkownika == pobierzIdUzytkownikaZDanychOddzielonychPionowymiKreskami(daneJednegoAdresataOddzielonePionowymiKreskami)) {
-            adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
-            adresaci.push_back(adresat);
+                adresat = pobierzDaneAdresata(daneJednegoAdresataOddzielonePionowymiKreskami);
+                adresaci.push_back(adresat);
             }
         }
     }
     daneOstaniegoAdresataWPliku = daneJednegoAdresataOddzielonePionowymiKreskami;
     plikTekstowy.close();
 
-    if (daneOstaniegoAdresataWPliku != ""){
+    if (daneOstaniegoAdresataWPliku != "") {
         idOstatniegoAdresata = pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(daneOstaniegoAdresataWPliku);
     }
 
@@ -123,12 +123,12 @@ Adresat PlikZAdresatami::pobierzDaneAdresata(string daneAdresataOddzielonePionow
     return adresat;
 }
 
-int PlikZAdresatami::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami){
+int PlikZAdresatami::pobierzIdAdresataZDanychOddzielonychPionowymiKreskami(string daneJednegoAdresataOddzielonePionowymiKreskami) {
     int pozycjaRozpoczeciaIdAdresata = 0;
     int idAdresata = MetodyPomocnicze::konwersjaStringNaInt(MetodyPomocnicze::pobierzLiczbe(daneJednegoAdresataOddzielonePionowymiKreskami, pozycjaRozpoczeciaIdAdresata));
     return idAdresata;
 }
 
-int PlikZAdresatami::pobierzIdOstatniegoAdresata(){
+int PlikZAdresatami::pobierzIdOstatniegoAdresata() {
     return idOstatniegoAdresata;
 }

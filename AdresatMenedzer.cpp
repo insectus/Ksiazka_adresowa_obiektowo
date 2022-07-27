@@ -36,19 +36,19 @@ Adresat AdresatMenedzer::podajDaneNowegoAdresata() {
     return adresat;
 }
 
-void AdresatMenedzer::wypiszWszystkichAdresatow(){
-    if(!adresaci.empty()){
+void AdresatMenedzer::wypiszWszystkichAdresatow() {
+    if(!adresaci.empty()) {
         for (long long unsigned int i = 0; i < adresaci.size(); i++) {
 
-        cout << adresaci[i].pobierzId() << endl;
-        cout << adresaci[i].pobierzIdUzytkownika() << endl;
-        cout << adresaci[i].pobierzImie() << endl;
-        cout << adresaci[i].pobierzNazwisko() << endl;
-        cout << adresaci[i].pobierzNumerTelefonu() << endl;
-        cout << adresaci[i].pobierzEmail() << endl;
-        cout << adresaci[i].pobierzAdres() << endl;
-    }
-    }else {
+            cout << "Id: \t\t\t" << adresaci[i].pobierzId() << endl;
+            cout << "Id Uzytkownika: \t" << adresaci[i].pobierzIdUzytkownika() << endl;
+            cout << "Imie: \t\t\t" << adresaci[i].pobierzImie() << endl;
+            cout << "Nazwisko: \t\t" << adresaci[i].pobierzNazwisko() << endl;
+            cout << "Numer telefonu: \t" << adresaci[i].pobierzNumerTelefonu() << endl;
+            cout << "Email: \t\t\t" << adresaci[i].pobierzEmail() << endl;
+            cout << "Adres: \t\t\t" << adresaci[i].pobierzAdres() << endl << endl;
+        }
+    } else {
         cout << "\nKsiazka adresowa jest pusta.\n\n";
     }
 
