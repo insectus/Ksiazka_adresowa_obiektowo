@@ -40,15 +40,7 @@ void AdresatMenedzer::wypiszWszystkichAdresatow() {
     if(!adresaci.empty()) {
         for (long long unsigned int i = 0; i < adresaci.size(); i++) {
 
-
-            cout << "\nId: \t\t\t" << adresaci[i].pobierzId() << endl;
-            cout << "Id Uzytkownika: \t" << adresaci[i].pobierzIdUzytkownika() << endl;
-            cout << "Imie: \t\t\t" << adresaci[i].pobierzImie() << endl;
-            cout << "Nazwisko: \t\t" << adresaci[i].pobierzNazwisko() << endl;
-            cout << "Numer telefonu: \t" << adresaci[i].pobierzNumerTelefonu() << endl;
-            cout << "Email: \t\t\t" << adresaci[i].pobierzEmail() << endl;
-            cout << "Adres: \t\t\t" << adresaci[i].pobierzAdres() << endl;
-
+            wyswietlDaneAdresata(adresaci[i]);
 
         }
     } else {
@@ -71,11 +63,35 @@ void AdresatMenedzer::wyszukajPoImieniu(){
         imiePoszukiwanegoAdresata = MetodyPomocnicze::wczytajLinie();
         imiePoszukiwanegoAdresata = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(imiePoszukiwanegoAdresata);
 
-        //for (vector <Adresat>::iterator  itr = adresaci.begin(); itr != adresaci.end(); itr++) {
         for (long long unsigned int i = 0; i < adresaci.size(); i++) {
-            //if (itr -> adresaci.pobierzImie() == imiePoszukiwanegoAdresata) {
             if (imiePoszukiwanegoAdresata == adresaci[i].pobierzImie()) {
-                //wyswietlDaneAdresata(*itr);
+                wyswietlDaneAdresata(adresaci[i]);
+                iloscAdresatow++;
+            }
+        }
+        wyswietlIloscWyszukanychAdresatow(iloscAdresatow);
+    } else {
+        cout << endl << "Ksiazka adresowa jest pusta" << endl << endl;
+    }
+    cout << endl;
+    system("pause");
+}
+
+void AdresatMenedzer::wyszukajPoNazwisku(){
+
+    string nazwiskoPoszukiwanegoAdresata = "";
+    int iloscAdresatow = 0;
+
+    system("cls");
+    if (!adresaci.empty()) {
+        cout << ">>> WYSZUKIWANIE ADRESATOW O NAZWISKU <<<" << endl << endl;
+
+        cout << "Wyszukaj adresatow o nazwisku: ";
+        nazwiskoPoszukiwanegoAdresata = MetodyPomocnicze::wczytajLinie();
+        nazwiskoPoszukiwanegoAdresata = MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(nazwiskoPoszukiwanegoAdresata);
+
+        for (long long unsigned int i = 0; i < adresaci.size(); i++) {
+            if (nazwiskoPoszukiwanegoAdresata == adresaci[i].pobierzNazwisko()) {
                 wyswietlDaneAdresata(adresaci[i]);
                 iloscAdresatow++;
             }

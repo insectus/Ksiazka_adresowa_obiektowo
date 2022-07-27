@@ -35,10 +35,11 @@ int main() {
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
                 break;
-            case '2': //wyszukaj po imieniu
+            case '2':
                 ksiazkaAdresowa.wyszukajPoImieniu();
                 break;
             case '3': //wyszukaj po nazwisku
+                ksiazkaAdresowa.wyszukajPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wypiszWszystkichAdresatow();

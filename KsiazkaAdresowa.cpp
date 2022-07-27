@@ -58,6 +58,15 @@ void KsiazkaAdresowa::wyszukajPoImieniu(){
     }
 }
 
+void KsiazkaAdresowa::wyszukajPoNazwisku(){
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+        adresatMenedzer->wyszukajPoNazwisku();
+    } else {
+        cout << "Aby wyszukac adresatow nalezy najpierw sie zalogowac\n.";
+        Sleep(1500);
+    }
+}
+
 char KsiazkaAdresowa::wybierzOpcjeZMenuGlownego() {
     char wybor;
 
