@@ -1,2 +1,3 @@
-3|1|Nana|Mucha|234 567 890|natali.com|komarza 34|
-7|2|Marian|Smoczynski|098 765 543|marian.com|jastrzebia 54|
+2|2|Joanna|Krzaszcz|516096332|joanna.krzaszcz@gmail.com|ul.Bielska 78 Gorki Wielkie|
+3|3|Natalia|Krzaszcz|516627416|Natalia.krzaszcz@gmail.com|ul.Bielska 78 Gorki Wielkie|
+6|2|Filip|Krzaszcz|516627416|filip.krzaszcz@gmail.com|ul.Bielska 78 Gorki Wielkie|

@@ -50,7 +50,7 @@ void AdresatMenedzer::wypiszWszystkichAdresatow() {
     system("pause");
 }
 
-void AdresatMenedzer::wyszukajPoImieniu(){
+void AdresatMenedzer::wyszukajPoImieniu() {
 
     string imiePoszukiwanegoAdresata = "";
     int iloscAdresatow = 0;
@@ -77,7 +77,7 @@ void AdresatMenedzer::wyszukajPoImieniu(){
     system("pause");
 }
 
-void AdresatMenedzer::wyszukajPoNazwisku(){
+void AdresatMenedzer::wyszukajPoNazwisku() {
 
     string nazwiskoPoszukiwanegoAdresata = "";
     int iloscAdresatow = 0;
@@ -107,7 +107,6 @@ void AdresatMenedzer::wyszukajPoNazwisku(){
 int AdresatMenedzer::usunAdresata() {
 
     int idUsuwanegoAdresata = 0;
-    int numerLiniiUsuwanegoAdresata = 0;
 
     system("cls");
     cout << ">>> USUWANIE WYBRANEGO ADRESATA <<<" << endl << endl;
@@ -122,8 +121,7 @@ int AdresatMenedzer::usunAdresata() {
             cout << endl << "Potwierdz naciskajac klawisz 't': ";
             znak = MetodyPomocnicze::wczytajZnak();
             if (znak == 't') {
-                numerLiniiUsuwanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idUsuwanegoAdresata);
-                plikZAdresatami.usunWybranaLinieWPliku(numerLiniiUsuwanegoAdresata);
+                plikZAdresatami.usunWybranegoAdresataZPliku(idUsuwanegoAdresata);
                 adresaci.erase(itr);
                 cout << endl << endl << "Szukany adresat zostal USUNIETY" << endl << endl;
                 system("pause");
@@ -247,8 +245,8 @@ void AdresatMenedzer::zaktualizujDaneWybranegoAdresata(Adresat adresat, int idEd
     int numerLiniiEdytowanegoAdresata = 0;
     string liniaZDanymiAdresata = "";
 
-    numerLiniiEdytowanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idEdytowanegoAdresata);
-    liniaZDanymiAdresata = plikZAdresatami.zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
+    //numerLiniiEdytowanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idEdytowanegoAdresata);
+    //liniaZDanymiAdresata = plikZAdresatami.zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
     plikZAdresatami.edytujWybranaLinieWPliku(numerLiniiEdytowanegoAdresata, liniaZDanymiAdresata);
 
     cout << endl << "Dane zostaly zaktualizowane." << endl << endl;
