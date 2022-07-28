@@ -33,6 +33,7 @@ public:
     void wylogowanieUzytkownika();
     void wyszukajPoImieniu();
     void wyszukajPoNazwisku();
+    void usunAdresata();
     void zmianaHaslaZalogowanegoUzytkownika();
     void dodajAdresata();
     int pobierzIdZalogowanegoUzytkownika();

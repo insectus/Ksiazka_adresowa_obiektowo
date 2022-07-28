@@ -38,13 +38,14 @@ int main() {
             case '2':
                 ksiazkaAdresowa.wyszukajPoImieniu();
                 break;
-            case '3': //wyszukaj po nazwisku
+            case '3':
                 ksiazkaAdresowa.wyszukajPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wypiszWszystkichAdresatow();
                 break;
-            case '5': // usun
+            case '5':
+                ksiazkaAdresowa.usunAdresata();
                 break;
             case '6': //edutyj
                 break;
