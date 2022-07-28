@@ -186,28 +186,28 @@ void AdresatMenedzer::edytujAdresata() {
                 cout << "Podaj nowe imie: ";
                 itr -> ustawImie(MetodyPomocnicze::wczytajLinie());
                 itr -> ustawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzImie()));
-                zaktualizujDaneWybranegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.edytujAdresataWPliku(*itr);
                 break;
             case '2':
                 cout << "Podaj nowe nazwisko: ";
                 itr -> ustawNazwisko(MetodyPomocnicze::wczytajLinie());
                 itr -> ustawImie(MetodyPomocnicze::zamienPierwszaLitereNaDuzaAPozostaleNaMale(itr -> pobierzImie()));
-                zaktualizujDaneWybranegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.edytujAdresataWPliku(*itr);
                 break;
             case '3':
                 cout << "Podaj nowy numer telefonu: ";
                 itr -> ustawNumerTelefonu(MetodyPomocnicze::wczytajLinie());
-                zaktualizujDaneWybranegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.edytujAdresataWPliku(*itr);
                 break;
             case '4':
                 cout << "Podaj nowy email: ";
                 itr -> ustawEmail(MetodyPomocnicze::wczytajLinie());
-                zaktualizujDaneWybranegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.edytujAdresataWPliku(*itr);
                 break;
             case '5':
                 cout << "Podaj nowy adres zamieszkania: ";
                 itr -> ustawAdres(MetodyPomocnicze::wczytajLinie());
-                zaktualizujDaneWybranegoAdresata(*itr, idEdytowanegoAdresata);
+                plikZAdresatami.edytujAdresataWPliku(*itr);
                 break;
             case '6':
                 cout << endl << "Powrot do menu uzytkownika" << endl << endl;
@@ -220,6 +220,7 @@ void AdresatMenedzer::edytujAdresata() {
     if (czyIstniejeAdresat == false) {
         cout << endl << "Nie ma takiego adresata." << endl << endl;
     }
+    cout << "\nDane zostaly zaktualizowane.\n\n";
     system("pause");
 }
 
@@ -239,15 +240,4 @@ char AdresatMenedzer::wybierzOpcjeZMenuEdycja() {
     wybor = MetodyPomocnicze::wczytajZnak();
 
     return wybor;
-}
-
-void AdresatMenedzer::zaktualizujDaneWybranegoAdresata(Adresat adresat, int idEdytowanegoAdresata) {
-    int numerLiniiEdytowanegoAdresata = 0;
-    string liniaZDanymiAdresata = "";
-
-    //numerLiniiEdytowanegoAdresata = plikZAdresatami.zwrocNumerLiniiSzukanegoAdresata(idEdytowanegoAdresata);
-    //liniaZDanymiAdresata = plikZAdresatami.zamienDaneAdresataNaLinieZDanymiOddzielonymiPionowymiKreskami(adresat);
-    plikZAdresatami.edytujWybranaLinieWPliku(numerLiniiEdytowanegoAdresata, liniaZDanymiAdresata);
-
-    cout << endl << "Dane zostaly zaktualizowane." << endl << endl;
 }
