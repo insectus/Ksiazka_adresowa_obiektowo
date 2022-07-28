@@ -47,9 +47,11 @@ int main() {
             case '5':
                 ksiazkaAdresowa.usunAdresata();
                 break;
-            case '6': //edutyj
+            case '6':
+                ksiazkaAdresowa.edytujAdresata();
                 break;
-            case '7': //zmien haslo
+            case '7':
+                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
                 ksiazkaAdresowa.wylogowanieUzytkownika();

@@ -22,7 +22,13 @@ void KsiazkaAdresowa::wylogowanieUzytkownika() {
 }
 
 void KsiazkaAdresowa::zmianaHaslaZalogowanegoUzytkownika() {
-    uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+        uzytkownikMenedzer.zmianaHaslaZalogowanegoUzytkownika();
+    } else {
+        cout << "Aby zmienic haslo uzytkownika nalezy najpierw sie zalogowac\n.";
+        Sleep(1500);
+    }
 }
 
 void KsiazkaAdresowa::dodajAdresata() {
@@ -39,7 +45,7 @@ void KsiazkaAdresowa::wypiszWszystkichAdresatow() {
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
         adresatMenedzer->wypiszWszystkichAdresatow();
     } else {
-        cout << "Aby dodac adresata nalezy najpierw sie zalogowac\n.";
+        cout << "Aby wypisac adresatow nalezy najpierw sie zalogowac\n.";
         Sleep(1500);
     }
 
@@ -71,7 +77,16 @@ void KsiazkaAdresowa::usunAdresata(){
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
         adresatMenedzer->usunAdresata();
     } else {
-        cout << "Aby wyszukac adresatow nalezy najpierw sie zalogowac\n.";
+        cout << "Aby usunac adresatow nalezy najpierw sie zalogowac\n.";
+        Sleep(1500);
+    }
+}
+
+void KsiazkaAdresowa::edytujAdresata(){
+    if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
+        adresatMenedzer->edytujAdresata();
+    } else {
+        cout << "Aby edytowac adresatow nalezy najpierw sie zalogowac\n.";
         Sleep(1500);
     }
 }

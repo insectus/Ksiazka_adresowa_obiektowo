@@ -1,2 +1,2 @@
-3|1|Natalia|Mucha|234 567 890|natali.com|komarza 34|
-6|3|Magdalena|Krz|789 456 123|magdalena.com|truskawkowa 45|
+3|1|Nana|Mucha|234 567 890|natali.com|komarza 34|
+7|2|Marian|Smoczynski|098 765 543|marian.com|jastrzebia 54|
