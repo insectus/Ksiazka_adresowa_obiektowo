@@ -1,5 +1,0 @@
-2|2|Joanna|Krzaszcz|516096332|joanna.krzaszcz@gmail.com|ul.Bielska 78 Gorki Wielkie|
-3|3|Natalia|Krzaszcz|516627416|Natalia.krzaszcz@gmail.com|ul.Bielska 78 Gorki Wielkie|
-6|2|Filip|Krzaszcz|516627416|filip.krzaszcz@gmail.com|ul.Bielska 78 Gorki Wielkie|
-7|1|Jakub|Chrzan|234 567 890|adam@mail.com|jasionowa 24|
-8|1|Monika|Markowska|516 243 516|monika@mail.com|miodowa 54|
