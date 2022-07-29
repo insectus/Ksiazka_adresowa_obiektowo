@@ -55,7 +55,7 @@ int KsiazkaAdresowa::pobierzIdZalogowanegoUzytkownika() {
     return uzytkownikMenedzer.pobierzIdZalogowanegoUzytkownika();
 }
 
-void KsiazkaAdresowa::wyszukajPoImieniu(){
+void KsiazkaAdresowa::wyszukajPoImieniu() {
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
         adresatMenedzer->wyszukajPoImieniu();
     } else {
@@ -64,7 +64,7 @@ void KsiazkaAdresowa::wyszukajPoImieniu(){
     }
 }
 
-void KsiazkaAdresowa::wyszukajPoNazwisku(){
+void KsiazkaAdresowa::wyszukajPoNazwisku() {
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
         adresatMenedzer->wyszukajPoNazwisku();
     } else {
@@ -73,7 +73,7 @@ void KsiazkaAdresowa::wyszukajPoNazwisku(){
     }
 }
 
-void KsiazkaAdresowa::usunAdresata(){
+void KsiazkaAdresowa::usunAdresata() {
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
         adresatMenedzer->usunAdresata();
     } else {
@@ -82,7 +82,7 @@ void KsiazkaAdresowa::usunAdresata(){
     }
 }
 
-void KsiazkaAdresowa::edytujAdresata(){
+void KsiazkaAdresowa::edytujAdresata() {
     if(uzytkownikMenedzer.czyUzytkownikJestZalogowany()) {
         adresatMenedzer->edytujAdresata();
     } else {
