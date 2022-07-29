@@ -217,7 +217,7 @@ void AdresatMenedzer::edytujAdresata() {
                 break;
             }
         }
-    if (czyIstniejeAdresat == false) {
+    if (!czyIstniejeAdresat) {
         cout << endl << "Nie ma takiego adresata." << endl << endl;
     }
     cout << "\nDane zostaly zaktualizowane.\n\n";

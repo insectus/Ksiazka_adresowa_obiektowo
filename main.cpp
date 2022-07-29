@@ -61,12 +61,3 @@ int main() {
     }
     return 0;
 }
-
-/*
-#include "AdresatMenedzer.h"
-int main() {
-
-    AdresatMenedzer adresatMenedzer("Adresaci.txt",1);
-    adresatMenedzer.wypiszWszystkichAdresatow();
-}
-*/
