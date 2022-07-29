@@ -35,19 +35,23 @@ int main() {
             case '1':
                 ksiazkaAdresowa.dodajAdresata();
                 break;
-            case '2': //wyszukaj po imieniu
+            case '2':
                 ksiazkaAdresowa.wyszukajPoImieniu();
                 break;
-            case '3': //wyszukaj po nazwisku
+            case '3':
+                ksiazkaAdresowa.wyszukajPoNazwisku();
                 break;
             case '4':
                 ksiazkaAdresowa.wypiszWszystkichAdresatow();
                 break;
-            case '5': // usun
+            case '5':
+                ksiazkaAdresowa.usunAdresata();
                 break;
-            case '6': //edutyj
+            case '6':
+                ksiazkaAdresowa.edytujAdresata();
                 break;
-            case '7': //zmien haslo
+            case '7':
+                ksiazkaAdresowa.zmianaHaslaZalogowanegoUzytkownika();
                 break;
             case '8':
                 ksiazkaAdresowa.wylogowanieUzytkownika();
